@@ -1,4 +1,5 @@
-import { greeting } from './greeting.js';
-import './styles.css';
+import { homePage } from './home-page/home-page.js';
+import './cssReset.css';
+import './home-page/home-styles.css';
 
-console.log(greeting);
+homePage().initPage();
