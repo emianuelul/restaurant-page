@@ -1,27 +1,7 @@
 import bgImg from '../imgs/background-img.jpg';
 import pizzaImg from '../imgs/pizza-img.png';
 
-export const homePage = () => {
-  // TO DO: ADD EVENT LISTENERS TO BUTTONS;
-  const initBtns = () => {
-    const navBar = document.querySelector('nav');
-    const btnsData = [
-      { name: 'Home', class: 'homeBtn' },
-      { name: 'Menu', class: 'menuBtn' },
-      { name: 'About', class: 'aboutBtn' },
-    ];
-
-    for (let i = 0; i < 3; i++) {
-      const btn = document.createElement('button');
-      btn.classList.add(btnsData[i].class);
-      const text = document.createElement('p');
-      text.textContent = btnsData[i].name;
-      btn.appendChild(text);
-
-      navBar.appendChild(btn);
-    }
-  };
-
+export const homePage = (function () {
   const initBg = () => {
     const header = document.querySelector('header');
 
@@ -69,9 +49,8 @@ export const homePage = () => {
 
   const initPage = () => {
     initBg();
-    initBtns();
     initContent();
   };
 
   return { initPage };
-};
+})();
