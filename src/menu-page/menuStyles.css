@@ -1,0 +1,85 @@
+.menu-container {
+  display: flex;
+  flex-direction: column;
+
+  gap: 128px;
+}
+
+.menu-category {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.menu-category > .category-title {
+  font-size: 3rem;
+  font-weight: bold;
+  color: white;
+}
+
+.menu-items {
+  display: flex;
+  justify-content: center;
+
+  gap: 32px;
+
+  width: 100%;
+  max-width: 100vw;
+  background-color: rgba(256, 256, 256, 0.15);
+  backdrop-filter: blur(16px);
+  box-shadow: 0px 8px 32px rgba(256, 256, 256, 0.4);
+
+  border-top: 1px solid rgba(256, 256, 256, 0.15);
+
+  padding: 1rem;
+
+  overflow-x: auto;
+  overflow-y: hidden;
+
+  scrollbar-color: rgba(256, 256, 256, 0.5) transparent;
+  scrollbar-width: thin;
+}
+
+.menu-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  padding: 1rem;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 1rem;
+
+  border-top: 1px solid rgba(256, 256, 256, 0.3);
+  border-left: 1px solid rgba(256, 256, 256, 0.3);
+  border-right: 1px solid rgba(0, 0, 0, 0.5);
+
+  flex-shrink: 0;
+}
+
+.menu-item > p {
+  color: white;
+}
+
+.menu-item > .item-name {
+  font-size: 2rem;
+}
+
+.menu-item > .item-img {
+  width: 256px;
+  height: auto;
+}
+
+.beverages > .menu-items > .menu-item > .item-img {
+  height: calc(256px + 32px);
+  width: auto;
+}
+
+img {
+  user-select: none;
+}
+
+html {
+  scrollbar-color: rgba(256, 256, 256, 0.5) transparent;
+  scrollbar-width: thin;
+}

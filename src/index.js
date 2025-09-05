@@ -1,9 +1,15 @@
 import { homePage } from './home-page/home-page.js';
-
-import './cssReset.css';
+import { menuPage } from './menu-page/menu-page.js';
 import './home-page/home-styles.css';
 
+import './menu-page/menuStyles.css';
+
+import './cssReset.css';
+import bgImg from './imgs/background-img.jpg';
+
 const processor = (function () {
+  const contentDiv = document.querySelector('#content');
+
   const initBtns = () => {
     const navBar = document.querySelector('nav');
     const btnsData = [
@@ -33,6 +39,21 @@ const processor = (function () {
     }
   };
 
+  const initBg = () => {
+    const header = document.querySelector('header');
+
+    const bgImage = document.createElement('img');
+    bgImage.src = bgImg;
+    bgImage.classList.add('bg-img');
+
+    const bgTint = document.createElement('div');
+    bgTint.classList.add('bg-tint');
+
+    const body = document.querySelector('body');
+    body.insertBefore(bgImage, header);
+    body.insertBefore(bgTint, header);
+  };
+
   function clickButton(btn) {
     const buttons = [...document.querySelectorAll('.navBtn')];
 
@@ -43,11 +64,17 @@ const processor = (function () {
     }
 
     btn.classList.add('clicked');
+    changePage();
+  }
+
+  function changePage() {
+    contentDiv.innerHTML = '';
   }
 
   const initPage = () => {
+    initBg();
     initBtns();
-    homePage.initPage();
+    menuPage.initPage();
   };
 
   return { initPage };

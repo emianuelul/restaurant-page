@@ -1,5 +1,7 @@
 body {
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background: #000;
 }
 
 .bg-img {
@@ -29,13 +31,14 @@ body {
 }
 
 #content {
-  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .logo {
+  margin-top: 10%;
+
   width: 50%;
   height: 50%;
 
@@ -178,4 +181,21 @@ nav > button.clicked {
 
 nav > button.clicked p {
   transform: scaleY(0.7);
+}
+
+header {
+  display: block;
+}
+
+footer {
+  margin-top: 2rem;
+  backdrop-filter: blur(25px);
+  background-color: rgba(238, 89, 89, 0.3);
+
+  text-align: center;
+  color: white;
+}
+
+footer > a {
+  color: #ec7777;
 }

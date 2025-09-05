@@ -1,22 +1,6 @@
-import bgImg from '../imgs/background-img.jpg';
 import pizzaImg from '../imgs/pizza-img.png';
 
 export const homePage = (function () {
-  const initBg = () => {
-    const header = document.querySelector('header');
-
-    const bgImage = document.createElement('img');
-    bgImage.src = bgImg;
-    bgImage.classList.add('bg-img');
-
-    const bgTint = document.createElement('div');
-    bgTint.classList.add('bg-tint');
-
-    const body = document.querySelector('body');
-    body.insertBefore(bgImage, header);
-    body.insertBefore(bgTint, header);
-  };
-
   const initContent = () => {
     const contentSection = document.querySelector('#content');
 
@@ -48,7 +32,6 @@ export const homePage = (function () {
   };
 
   const initPage = () => {
-    initBg();
     initContent();
   };
 
