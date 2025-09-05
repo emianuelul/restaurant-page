@@ -9,6 +9,7 @@ import bgImg from './imgs/background-img.jpg';
 
 const processor = (function () {
   const contentDiv = document.querySelector('#content');
+  let currentPage = 'menu';
 
   const initBtns = () => {
     const navBar = document.querySelector('nav');
@@ -32,6 +33,7 @@ const processor = (function () {
       btn.classList.add('navBtn');
 
       btn.addEventListener('click', (event) => {
+        currentPage = btnsData[i].name.toLowerCase();
         clickButton(btn);
       });
 
@@ -69,12 +71,25 @@ const processor = (function () {
 
   function changePage() {
     contentDiv.innerHTML = '';
+
+    switch (currentPage) {
+      case 'menu': {
+        menuPage.initPage();
+        break;
+      }
+      case 'home': {
+        homePage.initPage();
+        break;
+      }
+      default:
+        break;
+    }
   }
 
   const initPage = () => {
     initBg();
     initBtns();
-    menuPage.initPage();
+    homePage.initPage();
   };
 
   return { initPage };
