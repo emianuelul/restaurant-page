@@ -1,4 +1,4 @@
-import { homePage } from './home-page/home-page.js';
+import { homePage, currPage } from './home-page/home-page.js';
 import { menuPage } from './menu-page/menu-page.js';
 import './home-page/home-styles.css';
 
@@ -9,7 +9,7 @@ import bgImg from './imgs/background-img.jpg';
 
 const processor = (function () {
   const contentDiv = document.querySelector('#content');
-  let currentPage = 'menu';
+  let currentPage = currPage;
 
   const initBtns = () => {
     const navBar = document.querySelector('nav');

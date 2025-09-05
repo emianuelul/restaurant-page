@@ -1,4 +1,7 @@
 import pizzaImg from '../imgs/pizza-img.png';
+import { menuPage } from '../menu-page/menu-page.js';
+
+export let currPage = 'home';
 
 export const homePage = (function () {
   const initContent = () => {
@@ -22,6 +25,18 @@ export const homePage = (function () {
     const checkMenu = document.createElement('button');
     checkMenu.classList.add('goMenu');
     checkMenu.textContent = 'Check Our Menu!';
+
+    checkMenu.addEventListener('click', (event) => {
+      contentSection.innerHTML = '';
+
+      const buttons = [...document.querySelectorAll('.navBtn')];
+
+      buttons[0].classList.remove('clicked');
+      buttons[1].classList.add('clicked');
+
+      currPage = 'menu';
+      menuPage.initPage();
+    });
 
     logoSection.appendChild(restName);
     logoSection.appendChild(slogan);
