@@ -41,6 +41,11 @@ export const menuPage = (function () {
       category.classList.add('menu-category');
       category.classList.add(type.name.toLowerCase());
 
+      const wrapper = document.createElement('div');
+      wrapper.classList.add('menu-wrapper');
+
+      category.appendChild(wrapper);
+
       const categoryTitle = document.createElement('p');
       categoryTitle.classList.add('category-title');
       categoryTitle.textContent = type.name;
@@ -68,8 +73,9 @@ export const menuPage = (function () {
         menuItem.appendChild(itemName);
         menuItem.appendChild(itemPrice);
 
-        menuItemContainer.appendChild(menuItem);
+        wrapper.appendChild(menuItem);
       }
+      menuItemContainer.appendChild(wrapper);
       category.appendChild(categoryTitle);
       category.appendChild(menuItemContainer);
 
