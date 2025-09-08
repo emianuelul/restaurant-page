@@ -188,7 +188,11 @@ header {
 }
 
 footer {
-  margin-top: 2rem;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+
   backdrop-filter: blur(25px);
   background-color: rgba(238, 89, 89, 0.3);
 

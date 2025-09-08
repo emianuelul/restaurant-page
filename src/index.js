@@ -1,8 +1,10 @@
 import { homePage, currPage } from './home-page/home-page.js';
 import { menuPage } from './menu-page/menu-page.js';
+import { aboutPage } from './about-page/about-page.js';
 import './home-page/home-styles.css';
-
 import './menu-page/menuStyles.css';
+import './about-page/about-styles.css';
+import './fonts/stylesheet.css';
 
 import './cssReset.css';
 import bgImg from './imgs/background-img.jpg';
@@ -79,6 +81,10 @@ const processor = (function () {
       }
       case 'home': {
         homePage.initPage();
+        break;
+      }
+      case 'about': {
+        aboutPage.initPage();
         break;
       }
       default:

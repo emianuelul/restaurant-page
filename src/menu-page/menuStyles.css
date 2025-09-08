@@ -25,7 +25,7 @@
 
   background-color: rgba(256, 256, 256, 0.15);
   backdrop-filter: blur(16px);
-  box-shadow: 0px 8px 32px rgba(256, 256, 256, 0.4);
+  box-shadow: 0px 8px 32px rgba(256, 256, 256, 0.25);
 
   border-top: 1px solid rgba(256, 256, 256, 0.15);
 
@@ -68,6 +68,10 @@
 
 .menu-item > .item-name {
   font-size: 2rem;
+}
+
+.menu-item > .item-price {
+  font-size: 1.25rem;
 }
 
 .menu-item > .item-img {
