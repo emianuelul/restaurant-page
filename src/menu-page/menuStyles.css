@@ -16,6 +16,7 @@
 .menu-category > .category-title {
   font-weight: bold;
   color: white;
+  font-size: 3rem;
 }
 
 .menu-items {

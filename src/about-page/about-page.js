@@ -134,6 +134,7 @@ export const aboutPage = (function () {
   };
 
   const initPage = () => {
+    wrapper.innerHTML = '';
     initHero();
     initCards();
     initInfo();
