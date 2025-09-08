@@ -98,7 +98,7 @@ body {
   grid-column: 1/2;
   color: white;
 
-  margin-left: 8.5rem;
+  margin-left: 5.5rem;
   font-size: 2rem;
 
   align-self: self-start;
@@ -202,4 +202,10 @@ footer {
 
 footer > a {
   color: #ec7777;
+}
+
+.logo > p,
+nav p,
+.logo button {
+  font-family: 'libre', sans-serif;
 }

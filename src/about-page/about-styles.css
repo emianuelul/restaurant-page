@@ -44,7 +44,7 @@ h1 {
 .hero-content > .cook-name {
   position: relative;
 
-  font-size: clamp(2rem, 7.5vw, 10rem);
+  font-size: clamp(2rem, 6.3vw, 10rem);
   align-self: center;
 }
 
@@ -62,10 +62,10 @@ h1 {
 }
 
 .hero-content > .cook-description {
-  font-size: clamp(1rem, 1.25vw, 2rem);
+  font-size: clamp(1rem, 1.1vw, 2rem);
   align-self: center;
 
-  max-width: 80ch;
+  max-width: 65ch;
 }
 
 .card-section {
@@ -161,4 +161,16 @@ h1 {
 
 .info-container > p > span {
   color: white;
+}
+
+.cook-name,
+.card-title {
+  font-family: 'libre', sans-serif;
+}
+
+.cook-description,
+.card-content,
+.info-container > p,
+p > span {
+  font-family: 'montserrat', Helvetica;
 }
